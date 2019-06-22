@@ -43,6 +43,7 @@ object Libs {
         const val retrofit = "2.6.0"
         const val okhttp3Logging = "3.14.2"
         const val koin = "2.0.1"
+        const val constraintLayout = "1.1.2"
     }
 
     //Kotlin
@@ -75,5 +76,7 @@ object Libs {
     const val koin = "org.koin:koin-android:${Versions.koin}"
     const val koinVM = "org.koin:koin-android-viewmodel:${Versions.koin}"
     const val koinScope = "org.koin:koin-android-scope:${Versions.koin}"
+    //Constraint layout
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 
 }

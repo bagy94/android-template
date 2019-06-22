@@ -17,4 +17,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api project (":base_android")
+    //Constraint
+    api Libs.constraintLayout
 }
