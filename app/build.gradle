@@ -1,15 +1,15 @@
-apply plugin: 'com.android.application'
+apply plugin: Plugins.application
 
-apply plugin: 'kotlin-android'
+apply plugin: Plugins.kotlin
 
-apply plugin: 'kotlin-android-extensions'
+apply plugin: Plugins.kotlinExtensions
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion Android.compileSDK
     defaultConfig {
         applicationId "hr.bagy94.template"
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdkVersion Android.minSDK
+        targetSdkVersion Android.compileSDK
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -24,10 +24,5 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project (":app_common")
 }
