@@ -1,0 +1,22 @@
+apply plugin: Plugins.library
+
+apply plugin: Plugins.kotlin
+
+apply plugin: Plugins.kotlinExtensions
+
+apply plugin: Plugins.safeArgs
+
+android {
+    compileSdkVersion Android.compileSDK
+    defaultConfig {
+        minSdkVersion Android.minSDK
+        targetSdkVersion Android.compileSDK
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project (":base_android")
+    //Constraint
+    api Libs.constraintLayout
+}

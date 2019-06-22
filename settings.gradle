@@ -1,0 +1,2 @@
+include ':app', ':base_android', ':app_common'
+project(':base_android').projectDir = new File('base/base_android')
