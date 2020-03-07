@@ -1,0 +1,63 @@
+apply from: "../dependencies.gradle"
+apply plugin: plugin_app
+apply plugin: plugin_kotlin
+apply plugin: plugin_kotlin_ext
+apply plugin: plugin_kotlin_kapt
+
+android {
+    compileSdkVersion compileVersion
+    buildToolsVersion toolVersion
+    flavorDimensions flavorVersion
+    defaultConfig {
+        applicationId application_id
+        minSdkVersion minTarget
+        targetSdkVersion targetVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "API_URL", '"https://apiurl.com"'
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        demo {
+            dimension flavorVersion
+        }
+        free {
+            dimension flavorVersion
+            // Add free version specifics
+        }
+        paid {
+            dimension flavorVersion
+            // Add paid version specifics
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = java_compatibility
+        targetCompatibility = java_compatibility
+    }
+
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(":app_common")
+    implementation navigationComponentDynamicFeaturesFragment
+    kapt kapt_databinding
+}
