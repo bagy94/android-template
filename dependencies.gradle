@@ -21,7 +21,7 @@ ext {
     appCompat = "androidx.appcompat:appcompat:$appCompat_v"
     androidXCore_v = "1.2.0"
     androidXCore = "androidx.core:core-ktx:$androidXCore_v"
-    constraintLayout_v = "1.2.0"
+    constraintLayout_v = "1.1.3"
     constraintLayout = "androidx.constraintlayout:constraintlayout:$constraintLayout_v"
     androidLifecycle_v = '2.2.0'
     androidLifecycle = "androidx.lifecycle:lifecycle-extensions:$androidLifecycle_v"
