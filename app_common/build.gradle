@@ -15,11 +15,13 @@ android {
         sourceCompatibility = java_compatibility
         targetCompatibility = java_compatibility
     }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api baseModule
     api koin
     api koinViewModel
-    implementation okhttp_log
 }

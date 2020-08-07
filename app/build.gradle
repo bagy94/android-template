@@ -50,11 +50,16 @@ android {
         targetCompatibility = java_compatibility
     }
 
-
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //app modules
     implementation project(":app_common")
+    // app deps
+    implementation okhttp_logging
 }

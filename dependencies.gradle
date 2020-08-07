@@ -47,9 +47,10 @@ ext {
     retrofit = "com.squareup.retrofit2:retrofit:$retrofit_v"
     retrofitGSONConverter = "com.squareup.retrofit2:converter-gson:$retrofit_v"
     retrofitRxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava3:$retrofit_v"
-    okhttp_v = "4.4.0"
-    okhttp = "com.squareup.okhttp3:okhttp:$okhttp_v"
-    okhttp_log = "com.squareup.okhttp3:logging-interceptor:$okhttp_v"
+    // OkHttp
+    okhttp_version = '4.8.0'
+    okhttp_url = "com.squareup.okhttp3:okhttp-urlconnection:$okhttp_version"
+    okhttp_logging = "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
     //Android Jetpack
     navigationComponent_v = '2.3.0'
     navigationComponentFragment = "androidx.navigation:navigation-fragment-ktx:$navigationComponent_v"
