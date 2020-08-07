@@ -7,7 +7,7 @@ apply plugin: plugin_kotlin_kapt
 android {
     compileSdkVersion compileVersion
     buildToolsVersion toolVersion
-    flavorDimensions flavorVersion
+    flavorDimensions "app"
     defaultConfig {
         applicationId application_id
         minSdkVersion minTarget
@@ -15,10 +15,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "API_URL", '"https://apiurl.com"'
-    }
-    dataBinding {
-        enabled = true
     }
     buildTypes {
         debug {
@@ -34,14 +30,17 @@ android {
 
     productFlavors {
         demo {
-            dimension flavorVersion
+            buildConfigField "String", "API_URL", '"https://apiurl.com"'
+            dimension "app"
         }
         free {
-            dimension flavorVersion
+            buildConfigField "String", "API_URL", '"https://apiurl.com"'
+            dimension "app"
             // Add free version specifics
         }
         paid {
-            dimension flavorVersion
+            buildConfigField "String", "API_URL", '"https://apiurl.com"'
+            dimension "app"
             // Add paid version specifics
         }
     }
@@ -58,6 +57,4 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(":app_common")
-    implementation navigationComponentDynamicFeaturesFragment
-    kapt kapt_databinding
 }

@@ -9,42 +9,49 @@ ext {
     plugin_kotlin_kapt = "kotlin-kapt"  // apply plugin : plugin_kotlin_kapt
     plugin_safe_args = "androidx.navigation.safeargs.kotlin" // apply plugin : plugin_safe_args
     compileVersion = 29 // compileSdkVersion compileVersion
-    minTarget = 21 // minSdkVersion minTarget
+    minTarget = 23 // minSdkVersion minTarget
     targetVersion = 29 // targetSdkVersion targetVersion
     toolVersion = "29.0.2"
     java_compatibility = 1.8
-    flavorVersion = "version"
-    kotlin_v = '1.3.61'
+
+    // Base Module
+    baseModule_v = "-SNAPSHOT"
+    baseModule = "com.github.bagy94:android-base:$baseModule_v"
+    //Kotlin
+    kotlin_v = '1.3.72'
     kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_v"
-    kapt_databinding = "com.android.databinding:compiler:3.0.1"
+    // Android
     appCompat_v = "1.1.0"
     appCompat = "androidx.appcompat:appcompat:$appCompat_v"
-    androidXCore_v = "1.2.0"
+    androidXCore_v = '1.3.0'
     androidXCore = "androidx.core:core-ktx:$androidXCore_v"
-    constraintLayout_v = "1.1.3"
-    constraintLayout = "androidx.constraintlayout:constraintlayout:$constraintLayout_v"
     androidLifecycle_v = '2.2.0'
     androidLifecycle = "androidx.lifecycle:lifecycle-extensions:$androidLifecycle_v"
-    koin_v = "2.0.1"
+    androidMaterial_v = '1.3.0-alpha01'
+    androidMaterial = "com.google.android.material:material:$androidMaterial_v"
+    //Koin
+    koin_v = "2.1.6"
     koin = "org.koin:koin-android:$koin_v"
     koinViewModel = "org.koin:koin-android-viewmodel:$koin_v"
-    koinScope = "org.koin:koin-android-scope:$koin_v"
-    rxJava_v = "2.2.12"
-    rxJava = "io.reactivex.rxjava2:rxjava:$rxJava_v"
-    rxAndroid_v = "2.1.1"
-    rxAndroid = "io.reactivex.rxjava2:rxandroid:$rxAndroid_v"
-    rxKotlin_v = "2.3.0"
-    rxKotlin = "io.reactivex.rxjava2:rxkotlin:$rxKotlin_v"
-    rxBindings_v = '3.1.0'
-    rxBindings = "com.jakewharton.rxbinding3:rxbinding:$rxBindings_v"
-    retrofit_v = '2.7.1'
+    //Rx
+    rxJava_v = '3.0.4'
+    rxJava = "io.reactivex.rxjava3:rxjava:$rxJava_v"
+    rxAndroid_v = "3.0.0"
+    rxAndroid = "io.reactivex.rxjava3:rxandroid:$rxAndroid_v"
+    rxKotlin_v = '3.0.0'
+    rxKotlin = "io.reactivex.rxjava3:rxkotlin:$rxKotlin_v"
+    rxBindings_v = '4.0.0'
+    rxBindings = "com.jakewharton.rxbinding4:rxbinding:$rxBindings_v"
+    //Retrofit + Networking
+    retrofit_v = '2.9.0'
     retrofit = "com.squareup.retrofit2:retrofit:$retrofit_v"
     retrofitGSONConverter = "com.squareup.retrofit2:converter-gson:$retrofit_v"
+    retrofitRxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava3:$retrofit_v"
     okhttp_v = "4.4.0"
     okhttp = "com.squareup.okhttp3:okhttp:$okhttp_v"
     okhttp_log = "com.squareup.okhttp3:logging-interceptor:$okhttp_v"
-    navigationComponent_v = '2.3.0-alpha03'
+    //Android Jetpack
+    navigationComponent_v = '2.3.0'
     navigationComponentFragment = "androidx.navigation:navigation-fragment-ktx:$navigationComponent_v"
     navigationComponentNavigationUI = "androidx.navigation:navigation-ui-ktx:$navigationComponent_v"
-    navigationComponentDynamicFeaturesFragment = "androidx.navigation:navigation-dynamic-features-fragment:$navigationComponent_v"
 }
