@@ -35,6 +35,10 @@ internal class AppSharedPreferencesImpl(applicationContext: Context, private val
         get() = defaultSharedPref.getString(KEY_APP_VERSION, EMPTY_STRING)!!
         set(value) { editor { putString(KEY_APP_VERSION,value) } }
 
+    override var authToken: String?
+        get() = defaultSharedPref.getString(KEY_TOKEN, null)
+        set(value) { editor { putString(KEY_TOKEN,value) } }
+
     protected fun editor(editor: SharedPreferences.Editor.()->Unit){
         defaultSharedPref.edit().also(editor).apply()
     }

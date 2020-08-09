@@ -15,7 +15,7 @@ ext {
     java_compatibility = 1.8
 
     // Base Module
-    baseModule_v = "-SNAPSHOT"
+    baseModule_v = "master-SNAPSHOT"
     baseModule = "com.github.bagy94:android-base:$baseModule_v"
     //Kotlin
     kotlin_v = '1.3.72'

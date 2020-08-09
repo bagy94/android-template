@@ -1,2 +1,2 @@
-include ':app', ':app_common', ':base'
+include ':app', ':app_common'
 rootProject.name='NewApp'
