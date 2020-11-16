@@ -7,10 +7,10 @@ ext {
     plugin_kotlin_ext = "kotlin-android-extensions" // apply plugin : plugin_kotlin_ext
     plugin_kotlin_kapt = "kotlin-kapt"  // apply plugin : plugin_kotlin_kapt
     plugin_safe_args = "androidx.navigation.safeargs.kotlin" // apply plugin : plugin_safe_args
-    compileVersion = 29 // compileSdkVersion compileVersion
+    compileVersion = 30 // compileSdkVersion compileVersion
     minTarget = 23 // minSdkVersion minTarget
-    targetVersion = 29 // targetSdkVersion targetVersion
-    toolVersion = "29.0.2"
+    targetVersion = 30 // targetSdkVersion targetVersion
+    toolVersion = "30.0.2"
     java_compatibility = 1.8
 
     // Base Module
@@ -19,13 +19,13 @@ ext {
     //Kotlin
     kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     // Android
-    appCompat_v = "1.1.0"
+    appCompat_v = "1.2.0"
     appCompat = "androidx.appcompat:appcompat:$appCompat_v"
-    androidXCore_v = '1.3.0'
+    androidXCore_v = '1.3.2'
     androidXCore = "androidx.core:core-ktx:$androidXCore_v"
     androidLifecycle_v = '2.2.0'
     androidLifecycle = "androidx.lifecycle:lifecycle-extensions:$androidLifecycle_v"
-    androidMaterial_v = '1.3.0-alpha01'
+    androidMaterial_v = '1.3.0-alpha03'
     androidMaterial = "com.google.android.material:material:$androidMaterial_v"
     //Koin
     koin_v = "2.1.6"
